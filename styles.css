@@ -1,0 +1,225 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rebeccapurple;
+  color: #071723;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  width: 550px;
+}
+
+.space {
+  margin-bottom: 16px;
+}
+
+.space-md {
+  margin-bottom: 32px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header {
+  background: url(images/header.png) center right no-repeat;
+  background-size: cover;
+  height: 187px;
+  padding: 23px 36px;
+  width: 100%;
+}
+
+.header .title {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.header .title span {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.46;
+}
+
+#form textarea {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 8px;
+  color: #071723;
+  height: 140px;
+  padding: 16px;
+  resize: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.fieldset {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox-sticker {
+  display: inline-block;
+  vertical-align: middle;
+}
+.checkbox-sticker input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.checkbox-sticker label {
+  position: relative;
+  padding-left: 2.2em;
+  display: inline-block;
+}
+.checkbox-sticker label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.5em;
+  width: 1.5em;
+  background: #2f3676;
+  margin-right: 0.5em;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  border-radius: 5px;
+}
+
+.checkbox-sticker label::after {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 0.75em;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.checkbox-sticker label:focus::before,
+.checkbox-sticker label:hover::before {
+  background: #191847;
+}
+
+.checkbox-sticker input:checked + label::after {
+  opacity: 1;
+}
+
+.counter {
+  display: flex;
+}
+
+.counter svg {
+  fill: #2f3676;
+}
+
+.counter input {
+  text-align: center;
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 8px;
+  width: 60px;
+  height: 42px;
+}
+
+.footer {
+  padding: 32px;
+  background: #dde3e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer button {
+  appearance: none;
+  background: #2f3676;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 32px;
+  border: 2px solid #2f3676;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.footer p {
+  color: #00c57c;
+}
+
+.footer p + p {
+  color: #f33232;
+}
+
+.footer button:focus,
+.footer button:hover {
+  background: #191847;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.change-value-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: fill 1;
+}
+
+.change-value-button:hover svg {
+  fill: #191847;
+}
+
+.input-error-value {
+  background-color: #f59393 !important;
+  border: 1px solid #f33232 !important;
+}
+
+.change-value-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
